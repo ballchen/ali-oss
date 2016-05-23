@@ -731,7 +731,7 @@ function Client(options) {
     this.urllib = this.options.urllib;
   } else {
     this.urllib = require('urllib');
-    this.agent = this.options.agent || new AgentKeepalive();
+    this.agent = this.options.agent || new AgentKeepalive({keepAlive: false});
   }
 }
 
